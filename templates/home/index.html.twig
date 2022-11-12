@@ -1,20 +1,179 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <header class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" role="button" class="primary">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                        <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z"
+                                    fill="currentColor"
+                            />
+                            <path
+                                    d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z"
+                                    fill="currentColor"
+                            />
+                        </svg>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Projects/portfolio/portfolio/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Projects/portfolio/portfolio/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="#" role="button" class="secondary">
+
+                        <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor" />
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor" />
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor" />
+                            <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z"
+                                    fill="currentColor"
+                            />
+                        </svg>
+
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#" role="button" class="secondary">
+
+                        <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M14 11H10V13H14V11Z" fill="currentColor" />
+                            <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z"
+                                    fill="currentColor"
+                            />
+                        </svg>
+
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#" role="button" class="secondary">
+
+                        <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z"
+                                    fill="currentColor"
+                            />
+                        </svg>
+
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li></li>
+            </ul>
+            <ul>
+                <li>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="grid">
+            <div>
+                <hgroup>
+                    <h1>Dein Dehouwer</h1>
+                    <h2>Network & System Engineer | Software Engineer</h2>
+                </hgroup>
+                <p>Lorem ipsum ....</p>
+            </div>
+            <div>
+                <figure>
+                    <img src="images\dein.heic" alt="Me standing in a park">
+                    <figcaption>Me ^^</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Hobbies & Interests</h2>
+            <p>Lorem ipsum ....</p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <p>Lorem ipsum ....</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p>Lorem ipsum ....</p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Lorem ipsum ....</p>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>Runs on
+            <span data-tooltip="Coffee">
+                <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M6 2.5C5.44772 2.5 5 2.94772 5 3.5V5.5C5 6.05228 5.44772 6.5 6 6.5C6.55228 6.5 7 6.05228 7 5.5V3.5C7 2.94772 6.55228 2.5 6 2.5Z"
+                            fill="currentColor"
+                    />
+                    <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 21.5C15.973 21.5 18.441 19.3377 18.917 16.5H19C21.2091 16.5 23 14.7091 23 12.5C23 10.2909 21.2091 8.5 19 8.5V7.5H1V15.5C1 18.8137 3.68629 21.5 7 21.5H13ZM3 9.5V15.5C3 17.7091 4.79086 19.5 7 19.5H13C15.2091 19.5 17 17.7091 17 15.5V9.5H3ZM21 12.5C21 13.6046 20.1046 14.5 19 14.5V10.5C20.1046 10.5 21 11.3954 21 12.5Z"
+                            fill="currentColor"
+                    />
+                    <path
+                            d="M9 3.5C9 2.94772 9.44771 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5V5.5C11 6.05228 10.5523 6.5 10 6.5C9.44771 6.5 9 6.05228 9 5.5V3.5Z"
+                            fill="currentColor"
+                    />
+                    <path
+                            d="M14 2.5C13.4477 2.5 13 2.94772 13 3.5V5.5C13 6.05228 13.4477 6.5 14 6.5C14.5523 6.5 15 6.05228 15 5.5V3.5C15 2.94772 14.5523 2.5 14 2.5Z"
+                            fill="currentColor"
+                    />
+                </svg>
+            </span>
+        </p>
+    </footer>
+
 {% endblock %}
